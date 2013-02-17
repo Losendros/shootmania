@@ -31,8 +31,8 @@
 
 #Const C_OffZoneMinRadius		16.		///< Minimum size of the OffZone at the end
 #Const C_OffZoneDefaultRadius	300.	///< Starting radius of the OffZone
-#Const C_ArmorMax				200		///< Maximum number of armor at spawn
-#Const C_ArmorRespawn			100		///< Armor after an early respawn
+#Const C_ArmorMax				1000		///< Maximum number of armor at spawn
+#Const C_ArmorRespawn			500		///< Armor after an early respawn
 #Const C_RandomEarlyRespawn		True	///< Spawn at a random point when early respawning
 #Const C_DamageMax				100		///< Not possible to inflict more damage with one hit
 #Const C_CaptureSpeedBonus		1.		///< Default capture speed bonus
@@ -45,9 +45,9 @@
 #Const C_ScoresTableNbPlayers	16		///< Number of players in the scores table
 #Const C_ScoresTablePlayerHeight 6.		///< Height of a line for a player
 
-#Const C_ScoreHit		1	///< Index for hit points
-#Const C_ScoreSurvival	2	///< Index for survival points
-#Const C_ScorePole		3	///< Index for pole points
+#Const C_ScoreHit		5	///< Index for hit points
+#Const C_ScoreSurvival	7	///< Index for survival points
+#Const C_ScorePole		10	///< Index for pole points
 
 #Const C_TabMenu	1
 #Const C_AltMenu	2
@@ -1418,7 +1418,7 @@ Void UpdateFrameTab(CUIConfig UI, CMlPage Page, Text TabKey, Text FrameTabId) {
 	//ScoreTableOnlyManialink
 	if (! _TabsLib_AlwaysShowScores) {
 		declare netread Text _TabsLib_ScoresTableTab for UI;
-		// @Test: j'ai comment la ligne en dessous et ajouté la ligne avec AltMenuNoDefaultScores
+		// @Test: j'ai comment la ligne en dessous et ajoutï¿½ la ligne avec AltMenuNoDefaultScores
 		//UI.ScoreTableOnlyManialink = (_TabsLib_CurrentTab == _TabsLib_ScoresTableTab);
 		UI.AltMenuNoDefaultScores = (_TabsLib_CurrentTab == _TabsLib_ScoresTableTab);
 	}
